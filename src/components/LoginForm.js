@@ -9,7 +9,8 @@ render()
    	return (
    	 <Card>
    		<CardSection>
-          <TextInput 
+          <Input 
+          label = "Email"
           value = {this.state.text}
           onChangeText ={text => this.setState({text})}
           />
@@ -17,7 +18,9 @@ render()
    		</CardSection>
 
 
-   		<CardSection/>
+   		<CardSection>
+
+   		</CardSection>
 
    		<CardSection>
           <Button>
