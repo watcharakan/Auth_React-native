@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {View} from 'react-native';
 import firebase from 'firebase';
-import {Header, Button} from './components/common';
+import {Header, Button,CardSection} from './components/common';
 import LoginForm from './components/LoginForm';
 
 class App extends Component {
@@ -27,13 +27,15 @@ class App extends Component {
  });
 
 }
-rendeerContent()
-{
-if(this.setState.loggedIn)
-{
+rendeerContent(){
+if(this.state.loggedIn){
+
 return(
+
   <Button>
+
     Log out
+  
   </Button>
 
   );
@@ -47,10 +49,10 @@ render() {
     return(
         <View>
         <Header headerText = "Auth" />
+        <CardSection>
         {this.rendeerContent()}
+        </CardSection>
         </View>
-
-
     	);
 
 
