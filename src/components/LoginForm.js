@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import firebase from 'firebase';
 import {Text} from 'react-native';
-import {Button, Card,CardSection,Input,Spinner} from './common';
+import {Button, Card,CardSection, Input, Spinner} from './common';
 
 class LoginForm extends Component{
 	state = {email: '',password:'',error:'',loading:false  };
@@ -25,7 +25,7 @@ onButtonPress(){
 renderButton(){
     if(this.state.loading){
 
-    	return <Spinner size="small" />;
+    	return <Spinner size="small"/>;
     }
     return(
       <Button onPress ={this.onButtonPress.bind(this)}>
